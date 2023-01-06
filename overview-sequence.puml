@@ -1,0 +1,11 @@
+@startuml
+database source
+participant erised
+database destination
+
+source -> erised : Stream data in chunks from source
+erised -> erised : Use configuration (TBD) to determine fields in data stream
+erised -> erised : Use configuration to determine how data should be generated (random, types, relational)
+erised -> erised : Maintain durable cache of previous relational mapping where relevant
+erised -> destination : Write generated data to destination
+@enduml
