@@ -1,3 +1,6 @@
+mod io;
+use io::only_in_memory;
+
 fn main() {
-    println!("Hello, world!");
+    only_in_memory();
 }

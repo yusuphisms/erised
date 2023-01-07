@@ -6,7 +6,7 @@ We want to mimic the _makeup_ of a source data to a destination dataset without 
 
 # Constraints
 1. Respect Cardinality
-1. Respect Value Distribution (proporitionality)
+1. Respect Value Distribution (proportionality)
 1. Respect Relational Data
 1. Respect Memory Constraints
 
@@ -23,3 +23,10 @@ But when I spoke with someone else about it and tried to expand a little more on
 1. Size of data -- While not astronomical, it was enough that my sweet, sweet laptop cannot hold it in memory. That being said, I also think there is an upper bound for how much data I care to work with but I haven't drawn a line in the sand just yet.
 
 Let's think of the steps in terms of layers. A lot of this will be ETL-esque I think. We need some IO tools for reading data from the source and generating data to a destination. We need the secret sauce to be the data generation layer. Again, not particularly novel I think it will end up looking very similar to what [go-richelieu](https://github.com/estebgonza/go-richelieu) has set up.
+
+So for today, I want to start by thinking about how to define what _behavior_ an IO reader streaming data from source might be expected to do and a reasonable start to a parser. Maybe some high level goals:
+1. Parallel if possible (I'm thinking the source could be multiple files for example, or S3 objects)
+1. Stream in chunks but the parser should be smart enough to keep asking until EOF or unless otherwise specified.
+
+
+Ok, ready to make a mess in a prototype now.
