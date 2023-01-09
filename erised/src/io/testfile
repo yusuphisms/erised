@@ -1,0 +1,4 @@
+$ion_1_0 { Item:{ Authors:$dynamodb_SS::["Author1","Author2"], Dimensions:"8.5 x 11.0 x 1.5", ISBN:"333-3333333333", Id:103., InPublication:false, PageCount:6d2, Price:2d3, ProductCategory:"Book", Title:"Book 101 Title" } }
+$ion_1_0 { Item:{ Authors:$dynamodb_SS::["Author1","Author2"], Dimensions:"8.5 x 11.0 x 1.5", ISBN:"333-3333333333", Id:103., InPublication:false, PageCount:6d2, Price:2d3, ProductCategory:"Book", Title:"Book 103 Title" } }
+$ion_1_0 { Item:{ Authors:$dynamodb_SS::["Author1","Author2"], Dimensions:"8.5 x 11.0 x 1.5", ISBN:"333-3333333333", Id:103., InPublication:false, PageCount:6d2, Price:2d3, ProductCategory:"Book", Title:"Book 103 Title" } }
+$ion_1_0 { Item:{ Authors:$dynamodb_SS::["Author1","Author2"], Dimensions:"8.5 x 11.0 x 1.5", ISBN:"333-3333333333", Id:103., InPublication:false, PageCount:6d2, Price:2d3, ProductCategory:"Book", Title:"Book 104 Title" } }
